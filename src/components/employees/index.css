@@ -1,0 +1,18 @@
+section {
+  margin: 0 auto;
+  width: 800px;
+}
+input {
+  margin: 0 1rem;
+  padding: 0.5rem;
+}
+
+button {
+  background-color: skyblue;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+h1 {
+  text-align: center;
+}
