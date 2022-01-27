@@ -5,6 +5,7 @@ import "./index.css";
 export default class Employees extends Component {
   constructor(props) {
     super(props);
+    // Declaring the state of the employees component
     this.state = {
       name: "",
       age: "",
@@ -13,6 +14,7 @@ export default class Employees extends Component {
     };
   }
 
+  //OnInput field name change
   onInputChang(e) {
     if (e.target.name === "name") {
       this.setState({ name: e.target.value });
@@ -23,6 +25,11 @@ export default class Employees extends Component {
   saveEmoloyees() {
     let obj = { name: this.state.name, age: this.state.age };
     this.setState({ employeesList: [...this.state.employeesList, obj] });
+  }
+
+  //This function is being called when the child button is clicked
+  childButtonClicked(data) {
+    console.log(data);
   }
 
   render() {
@@ -42,7 +49,10 @@ export default class Employees extends Component {
           onChange={(e) => this.onInputChang(e)}
         />
         <button onClick={() => this.saveEmoloyees()}>Submit</button>
-        <EmployeesListComponent employeesList={this.state.employeesList} />
+        <EmployeesListComponent
+          employeesList={this.state.employeesList}
+          childButtonClicked={(data) => this.childButtonClicked(data)} // Passing function as a props to child component
+        />
       </div>
     );
   }
