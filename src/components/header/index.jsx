@@ -5,6 +5,7 @@ import "./index.css";
 const HeaderComponent = () => {
   const links = [
     { label: "Employees", path: "/" },
+    { label: "Redux", path: "redux" },
     { label: "About", path: "/about" },
   ];
   return (

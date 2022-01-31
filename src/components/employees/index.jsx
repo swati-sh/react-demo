@@ -28,9 +28,9 @@ export default class Employees extends Component {
   }
 
   //This function is being called when the child button is clicked
-  childButtonClicked(data) {
-    console.log(data);
-  }
+  // childButtonClicked(data) {
+  //   console.log(data);
+  // }
 
   render() {
     return (
@@ -51,7 +51,7 @@ export default class Employees extends Component {
         <button onClick={() => this.saveEmoloyees()}>Submit</button>
         <EmployeesListComponent
           employeesList={this.state.employeesList}
-          childButtonClicked={(data) => this.childButtonClicked(data)} // Passing function as a props to child component
+          // childButtonClicked={(data) => this.childButtonClicked(data)} // Passing function as a props to child component
         />
       </div>
     );

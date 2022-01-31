@@ -3,6 +3,7 @@ import Header from "../src/components/header";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Employees from "../src/components/employees";
 import AboutComponent from "./components/about";
+import SafesComponent from "./components/safes";
 
 export class App extends Component {
   render() {
@@ -12,6 +13,7 @@ export class App extends Component {
           <Header />
           <Routes>
             <Route path="/" element={<Employees />} />
+            <Route path="/redux" element={<SafesComponent />} />
             <Route path="/about" element={<AboutComponent />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
